@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"hac"},{"l":"hac.controller"},{"l":"hac.model"},{"l":"hac.repo"},{"l":"hac.session"}];updateSearchResults();
