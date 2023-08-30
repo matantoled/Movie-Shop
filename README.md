@@ -1,46 +1,56 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/7Tmn2VQK)
+# Author
+Matan Toledano
 
-# Authors
-* Name: Matan Toledano 311516272 Email: matanto@edu.hac.ac.il
-* Name: Yitzhak Halevi 315706986 Email: yitzhakha@edu.hac.ac.il
+If you have any questions or encounter any issues with this project, feel free to contact me at matantoled@gmail.com. I'll be more than happy to help!
 
-Note: we used 1 day of allowed late days.
-
-# Explanations
-We implemented 2 search options:
-1. Search by keyword.
-2. Discover movies with the option to add 1 or both of the below search attributes:
-      * Genere
-      * Year
----------------------
+# Modern E-commerce Movie Website
+![image](https://github.com/matantoled/Movie-Shop/assets/75612523/d1f9106b-878f-4ac1-9743-0c989334d3b7)
 
 
-# Initializing the template
+This project aims to build a modern e-commerce website allowing customers to browse movies, add them to a cart, and complete a purchase. It's developed using the Spring framework for the backend and React for the frontend. The website leverages the TMDB API to browse products.
 
-In order to initialize the project make sure to:
+![image](https://github.com/matantoled/Movie-Shop/assets/75612523/cfca9b06-e763-416b-9254-76b206399bd0)
 
-1. When you open the project, if intelliJ propose to "Load Maven Project" do it. You can later reload maven with the "M" icon on the right of the screen, or by right clicking on the pom.xml file and selecting "Maven -> Reload project".
-2. You see red lines in the code? Go to File -> Project Structure -> Project Settings -> Project -> SDK -> and choose your Java SDK
-3. Still see red stuff? Open the same dialog and click on "Fix" if you see some
-4. Edit your configuration "ex4" at the top right. Make sure the "Main class" is set to "hac.DemoApplication" and that Java is set
+## Features
 
-Everything ok?
-1. Run the SQL server as shown in the video (week 6) and create a database named "ex4". The DB credentials are stored in the application.properties file. You may change them if you want.
-2. Run the project, you should not see any errors in IntelliJ console
+### Frontend
+- **Search Page**: Allows users to search for movies/shows using a keyword or by discovering movies with genre and release year as attributes.
+- **Search History**: Records every search to the TMDB API and allows users to re-perform previous searches in a single click.
+- **Shopping Cart**: Users can add movies to a cart and view its contents, including the total cost.
+- **Checkout Page**: Users can complete their purchase by providing essential details.
 
-So far the only route you can check is http://localhost:8080/debug/purchases
-that returns a list of all purchases in the DB (empty for now).
+![image](https://github.com/matantoled/Movie-Shop/assets/75612523/4964098e-cec4-40cf-8e56-cc06e9c3522c)
 
-## Initializing the React client (movie-app)
 
-Open a terminal in *movie-app* and run `npm install` and then `npm start`. You should see the client running on http://localhost:3000.
-You can also open another instance of IntelliJ and open the *movie-app* folder as a project. You can then run the client from there.
+### Backend
+- **REST API**: Developed using Spring, facilitates frontend and backend communication.
+- **Shopping Cart Management**: Stored in user sessions using Spring session beans.
+- **Database Connectivity**: Connects to a SQL Server database to store completed orders.
 
-## Using the provided code to store purchases in the DB
+![image](https://github.com/matantoled/Movie-Shop/assets/75612523/97365b1b-b48d-4b6c-b788-5b4703379690)
 
-We provide you with ready-to-use code to store purchases in the DB, in order to give you a taste of what Spring can do for you.
-Look at the DebugController class. It has a method called "addPurchase" that receives a Purchase object and stores it in the DB.
-When you develop your own controller, you must declare the repository member exactly as it is declared in the DebugController class.
-Then you can use it to store purchases in the DB (repository.save(purchase)).
+## Getting Started
 
-## Still have problems? Come to class.
+### Prerequisites
+Ensure you have Maven, Java, and Node.js installed on your system.
+
+### Initializing the Backend
+1. Open the project in IntelliJ. If prompted, select "Load Maven Project". You can later reload Maven using the "M" icon or by right-clicking on `pom.xml` and selecting "Maven -> Reload project".
+2. In case of discrepancies in the code, navigate to File -> Project Structure -> Project Settings -> Project -> SDK and select your Java SDK.
+3. Edit the configuration "ex4" at the top right. Ensure the "Main class" is set to "hac.DemoApplication".
+4. Run the SQL server as instructed in the project guidelines and create a database named "ex4".
+5. Execute the project. There shouldn't be any errors in the IntelliJ console.
+
+### Initializing the React Frontend (`movie-app`)
+1. Navigate to the `movie-app` directory in your terminal.
+2. Run `npm install` followed by `npm start`. The client should be accessible at http://localhost:3000.
+
+## How to Use
+1. Start by searching for movies using keywords or attributes.
+2. Add desired movies to your shopping cart.
+3. View your cart and proceed to the checkout page.
+4. Fill in your details and complete the purchase. The transaction details will be saved in the database.
+
+## Acknowledgments
+- Special thanks to my partner, Yitzhak Halevi, for his significant contributions to this project.
+- Gratitude to Hadassah College for providing the necessary resources and support.
